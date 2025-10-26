@@ -29,6 +29,7 @@ final sl = GetIt.instance;
 /// Inicializa todas las dependencias de la aplicación
 Future<void> init() async {
   //! Features - Config
+
   // BLoC
   sl.registerFactory(
     () => ConfigBloc(
@@ -55,6 +56,7 @@ Future<void> init() async {
   );
 
   //! Features - Formulario
+
   // BLoC
   sl.registerFactory(
     () => FormularioBloc(
@@ -80,6 +82,7 @@ Future<void> init() async {
   );
 
   //! Core
+  // (Actualmente no hay dependencias core para registrar)
 
   //! External
   sl.registerLazySingleton(() => http.Client());
